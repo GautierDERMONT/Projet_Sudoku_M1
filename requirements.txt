@@ -1,0 +1,5 @@
+matplotlib>=3.5.0
+pygame>=2.5.0
+simpleaudio>=1.0.5
+colorama>=0.4.6
+datetime  
