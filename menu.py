@@ -4,7 +4,7 @@ from ia_player import IA_Joueur
 import os
 
 class Menu:
-    """Classe gerant l'affichage des menus"""
+    """Classe gérant l'affichage des menus"""
     
     def __init__(self, score_manager):
         self.score_manager = score_manager

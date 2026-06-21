@@ -79,7 +79,7 @@ class Partie:
     
     def pause_partie(self):
         """Met la partie en pause et la sauvegarde"""
-        print("\n⏸️ Partie mise en pause et sauvegardée...")
+        print("\n Partie mise en pause et sauvegardée...")
         self.sauvegarder_partie()
         print("Vous pourrez reprendre cette partie plus tard.")
         return False
@@ -114,7 +114,7 @@ class Partie:
             self.grille.grille = sauvegarde['grille']
             self.grille.grille_originale = sauvegarde['grille_originale']
             
-            print("✅ Partie chargée avec succès!")
+            print("Partie chargée avec succès!")
             
         except Exception as e:
             print(f"Erreur lors du chargement: {e}")
@@ -123,17 +123,17 @@ class Partie:
         """Gère la fin de partie"""
         if type_fin == 'victoire':
             points = self.points_victoire[self.niveau]
-            print(f"\n🎉 FÉLICITATIONS! Vous avez complété la grille!")
-            print(f"✨ Vous gagnez {points} points!")
+            print(f"\n FÉLICITATIONS! Vous avez complété la grille!")
+            print(f" Vous gagnez {points} points!")
             
         else:  # interruption
             points = self.points_interruption[self.niveau]
-            print(f"\n⚠️ Partie interrompue!")
-            print(f"📉 Vous perdez {abs(points)} points!")
+            print(f"\n Partie interrompue!")
+            print(f" Vous perdez {abs(points)} points!")
         
         # Mettre à jour le score
         self.joueur.ajouter_score(points)
-        print(f"💰 Nouveau score total: {self.joueur.score_total}")
+        print(f" Nouveau score total: {self.joueur.score_total}")
         
         # Supprimer la sauvegarde si elle existe
         if os.path.exists('sauvegarde/savegame.json'):

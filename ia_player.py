@@ -45,7 +45,7 @@ class IA_Joueur:
         
         if possibles:
             valeur = possibles[0]  # Choisir la première valeur possible
-            print(f"\n🤖 IA_Joueur place {valeur} à la position {ligne+1} {chr(65+col)}")
+            print(f"\n IA_Joueur place {valeur} à la position {ligne+1} {chr(65+col)}")
             return 'placer', ligne, col, valeur
         else:
             # Aucune valeur possible - situation bloquée

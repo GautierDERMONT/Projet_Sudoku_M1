@@ -86,7 +86,7 @@ class GrilleSudoku:
             if self.grille[ligne][j] == valeur and j != col:
                 return False
         
-        # Vérifier la colonne
+        # Vérifier colonne
         for i in range(9):
             if self.grille[i][col] == valeur and i != ligne:
                 return False
@@ -114,7 +114,7 @@ class GrilleSudoku:
             return False, "Cette case est déjà remplie initialement!"
         
         if valeur < 1 or valeur > 9:
-            return False, "La valeur doit être entre 1 et 9!"
+            return False, "La valeur doit être entre 1 et 9"
         
         if self.est_valide(ligne, col, valeur):
             self.grille[ligne][col] = valeur
