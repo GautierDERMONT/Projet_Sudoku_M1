@@ -133,8 +133,8 @@ class GrilleSudoku:
         return True, "Valeur supprimée!"
     
     def afficher(self):
-        print("\n     A   B   C   D   E   F   G   H   I")
-        print("   +---+---+---+---+---+---+---+---+---+")
+        print("\n     A  B  C   D  E  F   G  H  I")
+        print("   -------------------------------")
         
         for i in range(9):
             print(f"{i+1:2} |", end=" ")
@@ -145,13 +145,13 @@ class GrilleSudoku:
                     print(self.grille[i][j], end=" ")
                 if (j + 1) % 3 == 0 and j < 8:
                     print("|", end=" ")
-                else:
+                elif j < 8:
                     print("", end=" ")
             print("|")
             if (i + 1) % 3 == 0 and i < 8:
-                print("   +---+---+---+---+---+---+---+---+---+")
+                print("   -------------------------------")
         
-        print("   +---+---+---+---+---+---+---+---+---+")
+        print("   -------------------------------")
     
     def sauvegarder(self, nom_fichier):
         import json
